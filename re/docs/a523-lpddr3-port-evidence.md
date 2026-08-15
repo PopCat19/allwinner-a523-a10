@@ -71,6 +71,13 @@ They are not source or parameter provenance for SPL DRAM initialization.
 The reproducible commands, checkpoint hashes, and negative result are recorded in `../attempts/20260815-221711Z-boot-chain-read-only-analysis.md`.
 No vendor binary was copied into this repository.
 
+## Public source leads
+
+Public source and parameter candidates are bounded in `a523-lpddr3-source-leads.md`.
+The SyterKit sun55iw3 wrapper invokes an opaque payload and its available sample is LPDDR4.
+The public P85T FDT is LPDDR3 but describes a different 2 GiB board configuration.
+Neither candidate provides an A523 LPDDR3 controller source diff or parameter provenance for this tablet.
+
 ## Next evidence gate
 
 Do not write an SPL yet.

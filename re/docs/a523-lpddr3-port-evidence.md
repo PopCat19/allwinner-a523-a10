@@ -60,6 +60,17 @@ It cannot serve as parameter provenance for this 3 GiB tablet.
 
 Source: `https://gist.github.com/iuncuim/1206c234a8ecec6dd2d0343a03b6b956`.
 
+## Further boot-chain analysis
+
+The immutable recovery checkpoint was re-inspected read-only after this note's initial publication.
+`bootloader_a.img`, `env_a.img`, and `vendor_boot_a.img` did not provide an attributable pre-DRAM payload.
+The `vendor_boot_a` DTB identifies the A523 board and an `allwinner,dram` node, but has no `dram_para[]` table.
+The logical `vendor_a` and `vendor_dlkm_a` partitions expose only post-kernel DDR DFS runtime artifacts.
+They are not source or parameter provenance for SPL DRAM initialization.
+
+The reproducible commands, checkpoint hashes, and negative result are recorded in `../attempts/20260815-221711Z-boot-chain-read-only-analysis.md`.
+No vendor binary was copied into this repository.
+
 ## Next evidence gate
 
 Do not write an SPL yet.

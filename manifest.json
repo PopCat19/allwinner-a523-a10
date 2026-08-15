@@ -1,0 +1,32 @@
+{
+  "archive": "a523-a10-backup-20260815.tar.zst",
+  "capture": {
+    "backup_directory": "a523-backup-20260815-154603",
+    "soc": "Allwinner A523",
+    "device": "A10",
+    "architecture": "arm64-v8a",
+    "kernel": "5.15.144-android13-8",
+    "stock_vendor_fingerprint": "Caxilysh/A10/A10:13/TQ2A.230405.003.B2/20240710:user/release-keys",
+    "gsi_at_capture": "LineageOS 22.2 PHH Treble GSI, Android 15",
+    "logical_partition_slot": "a"
+  },
+  "partitions": {
+    "super_bytes": 3758096384,
+    "system_a_bytes": 2125406208,
+    "vendor_a_bytes": 137027584,
+    "vendor_dlkm_a_bytes": 7929856,
+    "system_dlkm_a_bytes": 348160,
+    "boot_a_bytes": 67108864,
+    "init_boot_a_bytes": 8388608,
+    "vendor_boot_a_bytes": 33554432
+  },
+  "integrity": {
+    "super_sha256": "6329f4f07818a1518c5916963ebd84ef1bab9843174982a876c23dec27f783b4",
+    "hash_manifest": "a523-a10-backup-20260815.sha256"
+  },
+  "notes": [
+    "The bootloader was unlocked at capture.",
+    "Only slot A had populated logical partition extents.",
+    "The archive excludes serial-bearing raw device inventory and Magisk UI XML logs."
+  ]
+}

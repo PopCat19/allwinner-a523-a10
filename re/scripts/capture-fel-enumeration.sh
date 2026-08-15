@@ -55,6 +55,7 @@ set -e
 } | sed -E \
 	-e 's/^([[:space:]]*(SID|Serial|Serial Number|Unique ID|USB ID)[[:space:]]*[:=][[:space:]]*).*/\1<redacted>/' \
 	-e 's/([Ss][Ii][Dd]|[Ss]erial([[:space:]]+[Nn]umber)?|[Uu]nique[[:space:]]+[Ii][Dd]|USB[[:space:]]+[Ii][Dd])[[:space:]]*[:=][[:space:]]*[^[:space:]]+/\1: <redacted>/g' \
+	-e 's/^[[:space:]]*[[:xdigit:]]{16,}[[:space:]]*$/<redacted-sid>/' \
 	>"$attempt_path"
 
 printf '%s\n' "Wrote re/attempts/$(basename "$attempt_path")"

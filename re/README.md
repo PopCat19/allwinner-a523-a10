@@ -17,7 +17,7 @@ Every first-stage experiment must use Allwinner FEL RAM loading only. Do not wri
 
 The device runs an Android vendor kernel. `xfel` 1.3.5 is installed on the research host and finds no FEL device while Android is running. No FEL payload has been tested from this repository.
 
-The first candidate milestone is an A523 LPDDR3 SPL that initializes RAM and produces early UART output. A standard A523 LPDDR4 or DDR3 payload is prohibited because this tablet's vendor device tree identifies LPDDR3. Current upstream U-Boot has A523 LPDDR3 PHY branches but no complete A523 LPDDR3 configuration path; see `docs/a523-lpddr3-source-audit.md`.
+The first candidate milestone is an A523 LPDDR3 SPL that initializes RAM and produces early UART output. A standard A523 LPDDR4 or DDR3 payload is prohibited because this tablet's vendor device tree identifies LPDDR3. Current upstream U-Boot has A523 LPDDR3 PHY branches but no complete A523 LPDDR3 configuration path; see `docs/a523-lpddr3-source-audit.md` and `docs/a523-lpddr3-port-evidence.md`.
 
 The first manual FEL interaction is restricted to the passive capture procedure in `docs/fel-passive-capture.md`. It runs only `xfel version` and `xfel sid` and creates a reviewable redacted record.
 

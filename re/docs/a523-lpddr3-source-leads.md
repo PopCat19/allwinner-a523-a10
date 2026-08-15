@@ -39,6 +39,18 @@ Sources:
 - <https://github.com/apritzel/SyterKit/commit/35ae1dc624cf2c3c91042654f3e2a3029612a0d4>
 - <https://github.com/apritzel/SyterKit/commit/acdc9e3>
 
+## Vendor boot0 configuration
+
+A public A523-family vendor U-Boot package contains LPDDR3 `sys_config.fex` profiles and prebuilt A527/T527 boot0 images.
+The profile supplies named LPDDR3 mode-register, drive, ODT, and training fields at 672 MHz.
+The vendor U-Boot source also identifies a 96-word DRAM handoff to FDT properties when its boot-parameter path is active.
+
+The boot0 implementation itself is prebuilt, and the profile clock differs from this tablet's verified 696 MHz input.
+The profile therefore provides A523-family packaging and handoff evidence only.
+It does not provide attributable controller source, a mapping to this tablet's `dram_para[]`, or an SPL candidate.
+
+See `a523-vendor-lpddr3-profile.md` for revision-pinned source links and public-artifact hashes.
+
 ## Comparable P85T parameters
 
 A public Teclast P85T FDT identifies `A523-PRO2-AXP717C`, A523, and LPDDR3 through `dram_para[01] = 7`.

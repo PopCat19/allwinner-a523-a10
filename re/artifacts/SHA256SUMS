@@ -1,0 +1,5 @@
+# Purpose: integrity hashes for public RE artifacts.
+6e06b28c0887598e66a1e4660b166df4bad8933f071f51c0cd6aa2cce19acf81  live-sun55iw3-redacted.dts
+d881d8ba6b7f9a97cda8d9d361aef45115553e48ddbd12735d930083a3de3f7a  dtbo/overlay-0.dtbo
+ca0aaa6e066f7eb9eb17e4aae566bce6807125b561a61deff6811d1c87b28c70  dtbo/overlay-1.dtbo
+3be54ed98c3a6c661078a2f32c5d5a3c1b2ae48962a996ee627af1b45d6fa4b9  dtbo/overlay-2.dtbo

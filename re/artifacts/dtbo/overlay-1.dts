@@ -1,0 +1,26 @@
+/dts-v1/;
+
+/ {
+	compatible = "board_manufacturer,board_model";
+	board_id = <0x02>;
+	board_rev = <0x00>;
+	another_hw_information = "some_data";
+	soc_id = <0x68000000>;
+
+	fragment@0 {
+		target = <0xffffffff>;
+
+		__overlay__ {
+			dtbo_version = <0x01>;
+
+			dtbo {
+				compatible = "allwinner,sunxi-dtbo";
+				dtbo_type = <0x02>;
+			};
+		};
+	};
+
+	__fixups__ {
+		soc = "/fragment@0:target:0";
+	};
+};

@@ -1,3 +1,6 @@
 *.tar.zst
 *.tar.zst.part-*
 *.img
+re/local/
+re/artifacts/*.dtb
+re/artifacts/*-raw.dts

@@ -48,6 +48,10 @@ The capture device had an unlocked bootloader. Magisk 30.7 was installed by patc
 
 GitHub Releases is the primary mirror for this split archive. Codeberg Releases, SourceForge Files, and Internet Archive are suitable secondary public mirrors. Keep the SHA-256 manifest with every mirror.
 
+## Linux RE workspace
+
+[`re/`](re/README.md) versions public reverse-engineering artifacts and attempts toward a RAM-only Linux boot. It includes a serial-redacted live device-tree decompile, extracted DTBO metadata, hardware facts, and a mandatory FEL safety gate. No vendor firmware or boot images are added to this workspace.
+
 ## License
 
-The repository metadata is CC0-1.0. Firmware and vendor binaries remain subject to their respective copyright and license terms.
+The repository metadata and captured factual device data are CC0-1.0. New `re/` scripts and documentation are MIT-licensed under [`LICENSE-MIT`](LICENSE-MIT). Firmware and vendor binaries remain subject to their respective copyright and license terms.

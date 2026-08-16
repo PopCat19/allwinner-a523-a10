@@ -39,6 +39,32 @@ Sources:
 - <https://github.com/apritzel/SyterKit/commit/35ae1dc624cf2c3c91042654f3e2a3029612a0d4>
 - <https://github.com/apritzel/SyterKit/commit/acdc9e3>
 
+## Archived SyterKit payload boundary
+
+Historical SyterKit revision `7a3bd4c9be0720d3e5e0dbd3080e25c980e9afb6` records `payloads` as a gitlink to commit `2d773bf4b9fd804e900cc62e0da3c3962f09c09c`.
+Its `.gitmodules` names `https://github.com/YuzukiHD/SyterKit-Payloads` as that submodule's public URL.
+The GitHub source archive for this revision contains `.gitmodules` but no populated `payloads/` tree.
+
+SyterKit revision `35ae1dc624cf2c3c91042654f3e2a3029612a0d4` configures its Avaota A1 board to build `payloads/sun55iw3_libdram` and convert `output/ddr.bin` into `board/avaota-a1/payloads/init_dram_bin.c`.
+The immediately later revision `a86e1aaf084f61eb20c115b4dfbd6449f56d0239` switches that board back to its embedded prebuilt payload mode while retaining the same source and output paths.
+The embedded C array is an opaque binary representation, not A523 LPDDR3 controller source.
+
+Direct Git transport and GitHub REST lookups for `YuzukiHD/SyterKit-Payloads` returned repository `404`.
+Historical wrapper revisions also reference other submodule commits, including `bc7cb5010298da3e2bfe4a311357b56bf740b84a` at `35ae1dc624cf2c3c91042654f3e2a3029612a0d4` and `ccd5be8e664caf6342f4cda3e59340fc085327d9` at `8c3e06c5e991e53e18885c674d238ae8fed0ba2c`.
+Those references identify missing revisions but do not recover their trees.
+
+Sources:
+
+- <https://github.com/apritzel/SyterKit/blob/7a3bd4c9be0720d3e5e0dbd3080e25c980e9afb6/.gitmodules>
+- <https://github.com/apritzel/SyterKit/tree/7a3bd4c9be0720d3e5e0dbd3080e25c980e9afb6>
+- <https://github.com/apritzel/SyterKit/commit/35ae1dc624cf2c3c91042654f3e2a3029612a0d4>
+- <https://github.com/apritzel/SyterKit/commit/a86e1aaf084f61eb20c115b4dfbd6449f56d0239>
+- <https://github.com/apritzel/SyterKit/commit/8c3e06c5e991e53e18885c674d238ae8fed0ba2c>
+- <https://api.github.com/repos/YuzukiHD/SyterKit-Payloads>
+
+This archival route recovered provenance for an unavailable opaque payload, not its source or a suitable binary.
+It provides no A523 LPDDR3 controller implementation, no LPDDR3 parameter profile, and no tablet-specific mapping.
+
 ## Vendor boot0 configuration
 
 A public A523-family vendor U-Boot package contains LPDDR3 `sys_config.fex` profiles and prebuilt A527/T527 boot0 images.

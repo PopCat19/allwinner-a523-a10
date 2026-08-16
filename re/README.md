@@ -21,6 +21,8 @@ The first candidate milestone is an A523 LPDDR3 SPL that initializes RAM and pro
 
 The first manual FEL interaction is restricted to the passive capture procedure in `docs/fel-passive-capture.md`. It runs only `xfel version` and `xfel sid` and creates a reviewable redacted record.
 
+`docs/linux-target-requirements.md` defines the post-gate RAM-only Linux boot chain, minimum kernel scope, and acceptance criteria. It does not approve a payload or relax the LPDDR3 FEL gate.
+
 ## Licensing
 
 Repository-authored scripts and documentation are MIT-licensed under `LICENSE-MIT`. Captured device-tree artifacts are factual extracts provided under the repository's CC0 metadata license. Vendor firmware, binaries, and original images remain excluded and retain their original licenses.

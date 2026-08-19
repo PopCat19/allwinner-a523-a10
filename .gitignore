@@ -5,3 +5,5 @@
 re/local/
 re/artifacts/*.dtb
 re/artifacts/*-raw.dts
+/out/
+/physical-test/
